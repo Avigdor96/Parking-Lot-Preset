@@ -1,3 +1,4 @@
+import type { Vehicle } from "./vehicle.interface.js";
 
 export class Parking {
     private spots: number;
@@ -16,7 +17,7 @@ export class Parking {
         return this.freeSpots;
     }
 
-    releaseSpot = () => {
+    releaseSpot = (vehicle: Vehicle) => {
         this.freeSpots++;
     }
 
